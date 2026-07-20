@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anime Universe</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    text-align:center;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffcc00;
+}
+
+
+/* Hero Section */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.7),
+    rgba(0,0,0,.9)
+    ),
+
+    radial-gradient(circle at center,
+    #3b0066,
+    #000);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+
+.hero h1{
+
+    font-size:70px;
+    color:#ffcc00;
+    text-shadow:
+    0 0 20px #ffcc00;
+
+}
+
+
+.hero p{
+
+    margin-top:20px;
+    font-size:22px;
+    color:#ddd;
+
+}
+
+
+button{
+
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ffcc00;
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.1);
+    box-shadow:0 0 20px #ffcc00;
+
+}
+
+
+
+/* Sections */
+
+section{
+
+    padding:80px 10%;
+
+}
+
+
+.title{
+
+    text-align:center;
+    color:#ffcc00;
+    font-size:40px;
+    margin-bottom:40px;
+
+}
+
+
+
+/* About */
+
+
+.about{
+
+    text-align:center;
+    color:#ccc;
+    font-size:20px;
+
+}
+
+
+
+/* Cards */
+
+
+.container{
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.card{
+
+    background:
+    linear-gradient(
+    145deg,
+    #111,
+    #222
+    );
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:1px solid #333;
+
+    transition:.4s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 30px
+    rgba(255,204,0,.3);
+
+}
+
+
+.card h3{
+
+    color:#ffcc00;
+    margin-bottom:15px;
+
+}
+
+
+.card p{
+
+    color:#bbb;
+
+}
+
+
+
+/* Character Section */
+
+
+.quote{
+
+    background:#111;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#ddd;
+
+}
+
+
+
+/* Contact */
+
+
+.contact{
+
+    text-align:center;
+
+}
+
+
+.contact a{
+
+    color:#ffcc00;
+    text-decoration:none;
+
+}
+
+
+
+/* Footer */
+
+
+footer{
+
+    background:#000;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#777;
+
+}
+
+
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+nav a{
+
+margin:8px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#anime">Anime</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Anime Universe</h1>
+
+<p>
+Explore stories, emotions, battles and unforgettable adventures.
+</p>
+
+<button onclick="scrollToAnime()">
+Explore Anime
+</button>
+
+</div>
+
+</section>
+
+
+
+
+<section id="about">
+
+<h2 class="title">
+About Anime
+</h2>
+
+
+<p class="about">
+
+Anime is a world of creativity where imagination,
+art and storytelling come together.
+From powerful heroes to emotional journeys,
+anime inspires millions of fans around the world.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section id="anime">
+
+
+<h2 class="title">
+Popular Anime Worlds
+</h2>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h3>Ninja Legends</h3>
+
+<p>
+A story about young warriors who train hard,
+protect their friends and chase their dreams.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Pirate Adventures</h3>
+
+<p>
+An exciting journey across oceans filled with
+friendship, freedom and discovery.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Dark Fantasy</h3>
+
+<p>
+A world where heroes fight against powerful
+enemies while discovering hidden truths.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Future Warriors</h3>
+
+<p>
+A futuristic battle between technology,
+courage and human determination.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+Anime Inspiration
+</h2>
+
+
+<div class="quote">
+
+"Great stories teach us courage,
+friendship and the power of never giving up."
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="contact">
+
+
+<h2 class="title">
+Contact
+</h2>
+
+
+<div class="contact">
+
+<p>
+Created by: Your Name
+</p>
+
+<p>
+GitHub:
+<a href="#">
+yourusername
+</a>
+</p>
+
+<p>
+Email:
+<a href="#">
+your@email.com
+</a>
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 Anime Universe | Designed with HTML & CSS
+
+</footer>
+
+
+
+
+<script>
+
+function scrollToAnime(){
+
+document
+.getElementById("anime")
+.scrollIntoView();
+
+}
+
+</script>
+
+
+
+</body>
+</html>
